@@ -14,6 +14,7 @@ ADD accept /etc/portage/package.accept_keywords/
 RUN emerge media-video/ffmpeg 
 
 # Install pytube
+RUN emerge dev-python/pip
 RUN pip install pytube
 
 # Remove files
