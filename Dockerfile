@@ -1,6 +1,6 @@
 FROM gentoo/stage3-amd64
 
-ENV FFMPEG_VERSION "3.2.4"
+ENV FFMPEG_VERSION "3.3"
 ENV PYTUBE_VERSION "0.3.3"
 
 RUN mkdir /usr/portage
@@ -16,6 +16,8 @@ ADD use /etc/portage/package.use/
 
 #RUN emerge media-libs/fontconfig
 RUN emerge media-video/ffmpeg 
+
+RUN emerge net-analyzer/nload
 
 # Install pytube
 RUN emerge dev-python/pip
